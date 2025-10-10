@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Top Rated E-Groceries | Mini Coding Project</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <!-- Navbar -->
@@ -32,15 +38,80 @@
 
         <div class="container1">
           <div class="box1">
-            <figure>
-              <blockquote></blockquote>
-              <figcaption></figcaption>
+            <!-- Kita gunakan tag figure sebagai wadah posisi -->
+            <figure class="testimonial-card">
+              <!-- Ini gambar aslinya -->
+              <img src="assets/img/img.png" alt="Testimonial background" />
+              <!-- Ini konten yang akan menimpa gambar -->
+              <div class="caption-overlay">
+                <blockquote>
+                  "Setiap hari beli buah dan sayur yang fresh di sini."
+                </blockquote>
+                <figcaption>
+                  <p class="name">Florence Hughes</p>
+                  <p>Ibu Rumah Tangga, 28</p>
+                </figcaption>
+              </div>
+            </figure>
+
+            <figure class="mini-desc">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="95"
+                height="150"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#2ecc71"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-award"
+              >
+                <circle cx="12" cy="8" r="7"></circle>
+                <polyline
+                  points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"
+                ></polyline>
+              </svg>
+              <div class="stat-text">
+                <h3>98%</h3>
+                <p>Customer Satisfaction</p>
+              </div>
             </figure>
           </div>
           <div class="box2">
-            <aside>
+            <aside class="contact-form">
               <h2>Contact Us</h2>
+              <p>Sales support will contact you within 24 hours</p>
               <form>
+                <div class="form-group">
+                  <label for="name">Your Name</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    placeholder="First and last name"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address</label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="example@gmail.com"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="interest">What are you interested in?</label>
+                  <div class="select-wrapper">
+                    <select id="interest" name="interest">
+                      <option value="" disabled selected>Select option</option>
+                      <option value="vegetable">Fresh Vegetable</option>
+                      <option value="fruit">Fresh Fruit</option>
+                      <option value="bundling">Bundling Set</option>
+                    </select>
+                  </div>
+                </div>
                 <button type="submit">Send</button>
               </form>
             </aside>
