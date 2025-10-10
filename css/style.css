@@ -7,3 +7,53 @@
   list-style-type: none;
   font-family: Poppins, sans-serif;
 }
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background-color: aqua; */
+  padding: 15px;
+  margin: 0 30px;
+  border-bottom: 1px solid rgb(131, 127, 127, 0.5);
+}
+
+header nav li {
+  display: inline-block;
+  margin: 0 20px;
+}
+
+header nav li a {
+  color: rgb(129, 129, 129);
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+header nav li a:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+main section .container0 {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  width: 100%;
+  /* background-color: aqua; */
+  margin: 50px 0;
+  gap: 18px;
+}
+
+.title {
+  max-width: 500px;
+  /* background-color: bisque; */
+  align-self: center;
+}
+
+main section .container0 h1,
+main section .container0 p {
+  color: #4f4f4f;
+}
+
+main section .container0 p {
+  opacity: 0.7;
+}
