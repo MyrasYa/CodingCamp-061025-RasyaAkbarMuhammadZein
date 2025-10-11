@@ -1,36 +1,59 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", () => {
   const contactForm = document.getElementById("contact-form");
   const formResult = document.getElementById("form-result");
 
-  contactForm.addEventListener("submit", function (event) {
-    event.preventDefault();
+  if (contactForm) {
+    contactForm.addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    const name = document.getElementById("name").value;
-    const email = document.getElementById("email").value;
-    const interestSelect = document.getElementById("interest");
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const interestSelect = document.getElementById("interest");
+      const interestText =
+        interestSelect.options[interestSelect.selectedIndex].text;
 
-    const interestText =
-      interestSelect.options[interestSelect.selectedIndex].text;
-    const interestValue = interestSelect.value;
+      if (!name || !email || !interestSelect.value) {
+        formResult.innerHTML = "<p>Please fill out all fields.</p>";
+        formResult.style.display = "block";
+        formResult.style.backgroundColor = "rgba(255, 107, 107, 0.5)";
+        return;
+      }
 
-    if (!name || !email || !interestValue) {
-      formResult.innerHTML =
-        '<p style="color: red;">Harap isi semua kolom terlebih dahulu.</p>';
+      const message = `
+        <p><strong>Thank you, ${name}!</strong></p>
+        <p>We have received your inquiry regarding "<strong>${interestText}</strong>".</p>
+        <p>A confirmation has been sent to <strong>${email}</strong>.</p>
+      `;
+
+      formResult.innerHTML = message;
       formResult.style.display = "block";
-      console.log("Harap isi semua kolom terlebih dahulu.");
-      return;
-    }
+      formResult.style.backgroundColor = "rgba(144, 238, 144, 0.5)";
 
-    const outputMessage = `
-      <p><strong>Terima kasih, ${name}!</strong></p>
-      <p>Data Anda telah kami terima:</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Interest:</strong> ${interestText}</p>
-    `;
+      contactForm.reset();
+    });
+  } else {
+    console.error("Element with ID 'contact-form' not found.");
+  }
 
-    formResult.innerHTML = outputMessage;
-    formResult.style.display = "block";
+  const animatedElements = document.querySelectorAll(".animate-on-scroll");
 
-    contactForm.reset();
-  });
+  if (animatedElements.length > 0) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    animatedElements.forEach((element) => {
+      observer.observe(element);
+    });
+  }
 });
