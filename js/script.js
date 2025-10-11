@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (!name || !email || !interestSelect.value) {
         formResult.innerHTML = "<p>Please fill out all fields.</p>";
-        formResult.style.display = "block";
+        formResult.style.display = "inline-block";
         formResult.style.backgroundColor = "rgba(255, 107, 107, 0.5)";
         return;
       }

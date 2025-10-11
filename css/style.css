@@ -21,7 +21,6 @@ header nav {
   align-items: center;
   padding: 15px;
   margin: 0 30px;
-  /* border-bottom: 0.4px solid rgb(131, 127, 127, 0.5); */
 }
 
 header nav .logo-icon {
@@ -162,7 +161,7 @@ main section .container1 .box2 {
   background-color: rgba(210, 190, 190, 0.1);
   height: 98%;
   width: 390px;
-  padding: 20px 30px 50px 30px;
+  padding: 20px 30px 10px 30px;
   font-family: "Playfair Display", serif;
   box-shadow: 0px 5px 2px rgba(0, 0, 0, 0.12);
   border-radius: 10px;
@@ -175,6 +174,13 @@ main section .container1 .box2 .contact-form {
   flex-direction: column;
 }
 
+main section .container1 .box2 .contact-form form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  flex-grow: 1; /* Kunci #2: Buat form merentang mengisi sisa ruang */
+}
+
 main section .container1 .box2 .contact-form h2 {
   font-size: 40px;
   color: #000000a5;
@@ -182,7 +188,7 @@ main section .container1 .box2 .contact-form h2 {
 
 main section .container1 .box2 .contact-form p {
   font-size: 15px;
-  margin: 15px 0 60px 0;
+  margin: 1px 0 40px 0;
   max-width: 200px;
   color: #000000a5;
   opacity: 0.6;
@@ -194,7 +200,7 @@ main section .container1 .box2 .contact-form form .form-group {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
   width: 100%;
 }
 
@@ -207,7 +213,7 @@ main section .container1 .box2 .contact-form .form-group select {
   padding: 15px 70px 15px 10px;
   border-radius: 2px;
   border: none;
-  width: 330px;
+  width: 100%;
 }
 
 main section .container1 .box2 .contact-form .form-group input::placeholder {
@@ -260,7 +266,7 @@ main
 }
 
 main section .container1 .box2 .contact-form form button {
-  width: 330px;
+  width: 100%;
   padding: 13px;
   border: none;
   font-size: 15px;
@@ -270,6 +276,7 @@ main section .container1 .box2 .contact-form form button {
   cursor: pointer;
   border-radius: 3px;
   transition: all 0.2s ease-in-out;
+  margin-top: auto;
 }
 
 main section .container1 .box2 .contact-form button:hover,
@@ -281,20 +288,20 @@ main section .container4 button:hover {
 
 #form-result {
   margin: 10px 0;
-  padding: 15px;
+  padding: 3px 120px 1px 10px;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.5);
   color: #333;
   font-size: 14px;
   line-height: 1.5;
   display: none;
-  width: 330px;
+  width: 100%;
   border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 #form-result p {
   margin: 0;
-  padding: 2px 0;
+  padding: 4px 0;
 }
 
 #form-result p strong {
@@ -468,7 +475,6 @@ footer .footer-box p {
   transform: scale(0.9);
 }
 
-/* Staggered animation for package cards */
 .package-card.animate-on-scroll:nth-child(1) {
   transition-delay: 0.1s;
 }
@@ -486,4 +492,112 @@ footer .footer-box p {
 }
 .package-card.animate-on-scroll:nth-child(6) {
   transition-delay: 0.6s;
+}
+
+@media (max-width: 992px) {
+  main section .container1 {
+    flex-direction: column;
+    height: auto;
+    padding: 50px 20px;
+    gap: 50px;
+  }
+
+  main section .container1 .box1,
+  main section .container1 .box2 {
+    width: 100%;
+    max-width: 540px;
+    height: auto;
+  }
+
+  main section .container1 .box2 {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navigasi */
+  header nav {
+    flex-direction: column;
+    gap: 15px;
+    margin: 0 15px;
+  }
+
+  main section .container0 {
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin: 45px 0 50px 0;
+  }
+
+  main section .container0 h1,
+  main section .container0 p {
+    margin-right: 0;
+  }
+
+  .title {
+    font-size: 36px;
+  }
+
+  .desc {
+    font-size: 20px;
+  }
+
+  main section .container1 .box1 .testimonial-card,
+  main section .container1 .box1 .mini-desc {
+    width: 100%;
+  }
+
+  .our-package-section .section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  main section .container4 {
+    padding: 45px 20px;
+    text-align: center;
+  }
+
+  main section .container4 h2 {
+    font-size: 32px;
+  }
+
+  footer .footer-box nav ul li {
+    margin: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  header nav {
+    padding: 15px 10px;
+  }
+
+  header nav ul {
+    text-align: center;
+  }
+
+  header nav li {
+    margin: 0 10px;
+  }
+
+  .title {
+    font-size: 28px;
+  }
+
+  .desc {
+    font-size: 18px;
+  }
+
+  main section .container1 .box2 {
+    padding: 30px 20px;
+  }
+
+  main section .container1 .box2 .contact-form h2 {
+    font-size: 28px;
+  }
+
+  .our-package-section .section-title,
+  main section .container4 h2 {
+    font-size: 28px;
+  }
 }
