@@ -508,7 +508,7 @@ footer .footer-box p {
 
   main section .container1 .box1 .testimonial-card,
   main section .container1 .box1 .mini-desc {
-    width: 100%; /* Ubah dari 380px menjadi 100% */
+    width: 100%;
   }
 
   #form-result {
@@ -571,12 +571,11 @@ footer .footer-box p {
     width: 100%;
   }
 
-  /* Penyesuaian Mini Desc menjadi vertikal dan garis di bawah */
   main section .container1 .box1 .mini-desc {
     flex-direction: column;
     text-align: center;
     gap: 10px;
-    padding-bottom: 30px; /* Ruang untuk garis di bawah */
+    padding-bottom: 30px;
   }
 
   main section .container1 .box1 .mini-desc::before {
