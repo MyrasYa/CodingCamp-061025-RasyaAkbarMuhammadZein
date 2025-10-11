@@ -17,7 +17,7 @@
     <header>
       <nav>
         <div class="logo-icon">
-          <img src="assets/logo/logo.png" alt="Ini logo" />
+          <h2>Terra Grove</h2>
         </div>
         <ul>
           <li><a href="#">Home</a></li>
@@ -38,11 +38,8 @@
 
         <div class="container1">
           <div class="box1">
-            <!-- Kita gunakan tag figure sebagai wadah posisi -->
             <figure class="testimonial-card">
-              <!-- Ini gambar aslinya -->
               <img src="assets/img/img.png" alt="Testimonial background" />
-              <!-- Ini konten yang akan menimpa gambar -->
               <div class="caption-overlay">
                 <blockquote>
                   "Setiap hari beli buah dan sayur yang fresh di sini."
@@ -82,7 +79,7 @@
             <aside class="contact-form">
               <h2>Contact Us</h2>
               <p>Sales support will contact you within 24 hours</p>
-              <form>
+              <form id="contact-form">
                 <div class="form-group">
                   <label for="name">Your Name</label>
                   <input
@@ -112,72 +109,181 @@
                     </select>
                   </div>
                 </div>
-                <button type="submit">Send</button>
+                <button type="submit">SEND</button>
               </form>
+
+              <div id="form-result"></div>
             </aside>
           </div>
         </div>
 
         <div class="container2">
-          <h3></h3>
-          <ol>
-            <li>
-              Your first feature, written in the form of a benefit statement
-            </li>
-            <li>
-              Your second feature, written in the form of a benefit statement
-            </li>
-            <li>
-              Your third feature, written in the form of a benefit statement
-            </li>
-          </ol>
+          <div class="motto-container">
+            <p class="motto-text">
+              Freshness isn't just a feature, it's our foundation.
+            </p>
+            <div class="motto-line"></div>
+          </div>
         </div>
       </section>
 
-      <section>
-        <h2>Our Package</h2>
+      <section class="our-package-section">
         <div class="container3">
-          <article>
-            <h3>Fresh Vegetable</h3>
-          </article>
-          <article>
-            <h3>Fresh Fruit</h3>
-          </article>
-          <article>
-            <h3>Instant Delivery</h3>
-          </article>
-          <article>
-            <h3>Kitchen Ingredient</h3>
-          </article>
-          <article>
-            <h3>Kitchen Set</h3>
-          </article>
-          <article>
-            <h3>Bundling Set</h3>
-          </article>
+          <h2 class="section-title">Our Package</h2>
+          <div class="box-container3">
+            <article class="package-card">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path>
+                <path d="M22 12A10 10 0 0 0 12 2v10z"></path>
+              </svg>
+              <h3>Fresh Vegetable</h3>
+              <p>Sayuran segar langsung dari sumber pertanian terbaik</p>
+            </article>
+            <article class="package-card">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M12 2a10 10 0 0 0-10 10c0 4 2 7 5 9"></path>
+              </svg>
+              <h3>Fresh Fruit</h3>
+              <p>
+                Buah dengan kualitas terbaik dari local atau import dan harga
+                yang menarik
+              </p>
+            </article>
+            <article class="package-card">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon
+                  points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+                ></polygon>
+              </svg>
+              <h3>Instant Delivery</h3>
+              <p>
+                Di kirim instan oleh kurir yang telah di training dengan SOP
+                untuk menjaga kondisi belanja kamu
+              </p>
+            </article>
+            <article class="package-card">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"
+                ></path>
+                <line x1="7" y1="7" x2="7.01" y2="7"></line>
+              </svg>
+              <h3>Kitchen Ingredient</h3>
+              <p>Bumbu dapur lengkap untuk keperluan memasak kamu</p>
+            </article>
+            <article class="package-card">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+              </svg>
+              <h3>Kitchen Set</h3>
+              <p>Segala jenis alat masak untuk membantu kamu memasak</p>
+            </article>
+            <article class="package-card">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+                ></path>
+                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+              </svg>
+              <h3>Bundling Set</h3>
+              <p>
+                Bingung masak apa?sudah tersedia paket untuk kamu masak di dapur
+                mu
+              </p>
+            </article>
+          </div>
         </div>
       </section>
 
       <section>
         <div class="container4">
-          <p></p>
           <h2>Your Closing Argument Headline</h2>
-          <a href="#">Call to Action</a>
+          <p>
+            Suspendisse egestas rhoncus in bibendum. Donec urna neque, euismod
+            sed justo quis, convallis tincidunt risus. Phasellus fringilla odio
+            vel erat fringilla.
+          </p>
+          <button type="submit">CALL TO ACTION</button>
         </div>
       </section>
     </main>
     <!-- Section -->
     <!-- Footer -->
     <footer>
-      <div>
+      <div class="footer-box">
+        <h2>Terra Grove</h2>
         <nav>
           <ul>
             <li><a href="#">Terms of Service</a></li>
             <li><a href="#">Privacy Policy</a></li>
           </ul>
         </nav>
+        <p>&copy; Terra Grove 2025</p>
       </div>
-      <p>&copy; 2025 Moqups</p>
     </footer>
     <!-- Footer -->
 
