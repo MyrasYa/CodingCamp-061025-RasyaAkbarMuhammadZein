@@ -178,7 +178,7 @@ main section .container1 .box2 .contact-form form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  flex-grow: 1; /* Kunci #2: Buat form merentang mengisi sisa ruang */
+  flex-grow: 1;
 }
 
 main section .container1 .box2 .contact-form h2 {
@@ -196,7 +196,6 @@ main section .container1 .box2 .contact-form p {
 }
 
 main section .container1 .box2 .contact-form form .form-group {
-  /* background-color: aquamarine; */
   display: flex;
   align-items: flex-start;
   justify-content: center;
@@ -495,6 +494,37 @@ footer .footer-box p {
   transition-delay: 0.6s;
 }
 
+@media (max-width: 1024px) {
+  main section .container1 {
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  main section .container1 .box1,
+  main section .container1 .box2 {
+    width: 50%;
+    height: 98%;
+  }
+
+  main section .container1 .box1 .testimonial-card,
+  main section .container1 .box1 .mini-desc {
+    width: 100%; /* Ubah dari 380px menjadi 100% */
+  }
+
+  #form-result {
+    margin: 10px 0;
+    padding: 3px 85px 1px 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    display: none;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
 @media (max-width: 768px) {
   header nav {
     flex-direction: column;
@@ -522,7 +552,6 @@ footer .footer-box p {
     font-size: 20px;
   }
 
-  /* Layout utama menjadi vertikal */
   main section .container1 {
     flex-direction: column;
     height: auto;
@@ -550,12 +579,10 @@ footer .footer-box p {
     padding-bottom: 30px; /* Ruang untuk garis di bawah */
   }
 
-  /* Sembunyikan garis atas */
   main section .container1 .box1 .mini-desc::before {
     display: none;
   }
 
-  /* Buat garis bawah baru */
   main section .container1 .box1 .mini-desc::after {
     content: "";
     position: absolute;
@@ -587,7 +614,6 @@ footer .footer-box p {
   }
 }
 
-/* Untuk Ponsel Sangat Kecil (<= 480px) */
 @media (max-width: 480px) {
   header nav {
     padding: 15px 10px;
@@ -628,5 +654,18 @@ footer .footer-box p {
   .our-package-section .section-title,
   main section .container4 h2 {
     font-size: 28px;
+  }
+
+  #form-result {
+    margin: 10px 0;
+    padding: 3px 80px 1px 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    color: #333;
+    font-size: 14px;
+    line-height: 1.5;
+    display: none;
+    width: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
   }
 }
