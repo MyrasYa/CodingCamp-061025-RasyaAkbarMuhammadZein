@@ -187,8 +187,8 @@ This project is open source and available under the [MIT License](LICENSE).
 ## 👨‍💻 Author
 
 **Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+- GitHub: [@MyrasYa](https://github.com/MyrasYa)
+- Email: rasyaakbar2310@gmail.com
 
 ## 🙏 Acknowledgments
 
