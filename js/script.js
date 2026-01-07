@@ -27,11 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       formResult.innerHTML = message;
       formResult.style.display = "block";
-<<<<<<< HEAD
       formResult.style.backgroundColor = "rgba(144, 238, 144, 0.5)";
-=======
       formResult.style.backgroundColor = "rgba(144, 238, 144, 0.5)"; // Optional
->>>>>>> 277d458 (Add README.md)
 
       contactForm.reset();
     });
